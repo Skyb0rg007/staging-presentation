@@ -1,0 +1,123 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.35.0.
+--
+-- see: https://github.com/sol/hpack
+
+name:           stream-talk
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/Skyb0rg007/stream-talk#readme>
+homepage:       https://github.com/Skyb0rg007/stream-talk#readme
+bug-reports:    https://github.com/Skyb0rg007/stream-talk/issues
+author:         Skye Soss
+maintainer:     skyler.soss@gmail.com
+copyright:      2022 Skye Soss
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/Skyb0rg007/stream-talk
+
+library
+  exposed-modules:
+      Data.Fixpoint.Fix
+      Data.Fixpoint.Mu
+      Data.Fixpoint.Nu
+      Data.ListF
+      Data.Stream.Pull
+      Data.Stream.Push
+      Prelude.Staged
+      Staged.Stream.Push
+      Staged.Stream.PushList
+  other-modules:
+      Paths_stream_talk
+  hs-source-dirs:
+      src
+  default-extensions:
+      BlockArguments
+      ExistentialQuantification
+      GADTs
+      ImportQualifiedPost
+      RankNTypes
+      ScopedTypeVariables
+      StandaloneKindSignatures
+      TypeOperators
+      UnicodeSyntax
+      DeriveFunctor
+      DeriveFoldable
+      DeriveTraversable
+      TypeSynonymInstances
+      FlexibleInstances
+      FlexibleContexts
+      LambdaCase
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      base >=4.7 && <5
+    , template-haskell
+  default-language: Haskell2010
+
+executable stream-talk-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_stream_talk
+  hs-source-dirs:
+      app
+  default-extensions:
+      BlockArguments
+      ExistentialQuantification
+      GADTs
+      ImportQualifiedPost
+      RankNTypes
+      ScopedTypeVariables
+      StandaloneKindSignatures
+      TypeOperators
+      UnicodeSyntax
+      DeriveFunctor
+      DeriveFoldable
+      DeriveTraversable
+      TypeSynonymInstances
+      FlexibleInstances
+      FlexibleContexts
+      LambdaCase
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , stream-talk
+    , template-haskell
+  default-language: Haskell2010
+
+test-suite stream-talk-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_stream_talk
+  hs-source-dirs:
+      test
+  default-extensions:
+      BlockArguments
+      ExistentialQuantification
+      GADTs
+      ImportQualifiedPost
+      RankNTypes
+      ScopedTypeVariables
+      StandaloneKindSignatures
+      TypeOperators
+      UnicodeSyntax
+      DeriveFunctor
+      DeriveFoldable
+      DeriveTraversable
+      TypeSynonymInstances
+      FlexibleInstances
+      FlexibleContexts
+      LambdaCase
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , stream-talk
+    , template-haskell
+  default-language: Haskell2010
